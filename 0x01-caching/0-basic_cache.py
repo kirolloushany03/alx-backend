@@ -4,6 +4,9 @@ from base_caching import BaseCaching
 
 
 class BasicCache(BaseCaching):
+    """Represents an object that allows storing and
+    retrieving items from a dictionary.
+    """
     def put(self, key, item):
         """
         Add key-value pair to cache if neither is None
