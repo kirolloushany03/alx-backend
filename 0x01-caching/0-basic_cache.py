@@ -1,19 +1,21 @@
 #!/usr/bin/env python3
-"""basic cashing dictionary"""
+"""Basic caching module.
+"""
 from base_caching import BaseCaching
 
 
 class BasicCache(BaseCaching):
+    """Represents an object that allows storing and
+    retrieving items from a dictionary.
+    """
     def put(self, key, item):
-        """Add key-value pair to cache if neither is None."""
-        if key is None and item is None:
+        """Adds an item in the cache.
+        """
+        if key is None or item is None:
             return
         self.cache_data[key] = item
 
     def get(self, key):
-        """Retrieve value from cache linked to key, or return None."""
-        # if key is not None and key in self.cache_data:
-        #     return self.cache_data[key]
-        # else:
-        #     return None
+        """Retrieves an item by key.
+        """
         return self.cache_data.get(key, None)
